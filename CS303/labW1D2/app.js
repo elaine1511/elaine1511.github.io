@@ -21,9 +21,8 @@ function nameString(obj) {
             let keys = [];
             let result;
             for (let key in obj) {
-                keys.push(key);    //[a,z,m]
-                result = keys.sort().join(".");   //[a,m,z]
-                //"a.m.z" 
+                keys.push(key);
+                result = keys.sort().join(".");
             }
             return result;
         }
