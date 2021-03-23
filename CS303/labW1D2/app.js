@@ -3,11 +3,6 @@
 "use strict";
 
 // See tests.js for behavior
-//nameString([]), "object has no properties"
-//nameString(), "no object passed"
-//nameString(null), "null argument"
-//nameString({a:5}), "a"
-//nameString({a:5, z:6, m:8}), "a.m.z"
 
 function nameString(obj) {
     if (obj === undefined) {
