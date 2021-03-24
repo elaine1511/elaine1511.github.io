@@ -14,8 +14,8 @@ Creates an object that contains the following information from the "this" object
 */
 
 function analyzer() {
-	let obj = {
-		numProperties: function () {
+	return {
+		numProperties() {
 			let num = 0;
 			for (let key in this) {
 				num += 1;
@@ -39,9 +39,10 @@ function analyzer() {
 				}
 			}
 			return counter;
-		}
+		},
 	}
 }
+
 
 /* Constructor for a person object
 	Person(name, country, grades) creates object
