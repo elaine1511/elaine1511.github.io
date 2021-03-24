@@ -26,7 +26,7 @@ describe("Analyser", function () {
 */
 
 function analyzer() {
-	let obj = {
+	this = {
 		numProperties: function () {
 			let num = 0;
 			for (let key in this) {
