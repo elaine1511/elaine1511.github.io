@@ -11,18 +11,6 @@ Creates an object that contains the following information from the "this" object
 	cntShortName	// count of property names shorter than 3 characters
 	cntReferences	// count of reference properties (use the typeof operator to compute this)
 }	
-
-describe("Analyser", function () {
-		it("analysis properties", function () {
-			let person = new Person("bob", "usa", [100, 90]);
-			person.f = analyzer;	// name too short
-			person.x = 0;			// name too short
-			let analysis = person.f();
-			assert.equal(analysis.numProperties, 6);
-			assert.equal(analysis.cntShortName, 2);
-			assert.equal(analysis.cntReference, 1);	// the grades array is a reference.
-		});
-	});	
 */
 
 function analyzer() {
@@ -78,5 +66,4 @@ function Person(name, country, grades) {
 	}
 }
 
-// let test = new Person("bob", "usa", [100, 90]);
-// console.log(test.country);
+
