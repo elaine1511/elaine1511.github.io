@@ -20,7 +20,7 @@ function analyzer() {
 
 	obj.numProperties = keys.length;
 	let countNum = 0;
-	for (let key in keys) {
+	for (let key of keys) {
 		if (key.length < 3) {
 			countNum++;
 		}
@@ -28,7 +28,7 @@ function analyzer() {
 	obj.cntShortName = count;
 
 	let countObj = 0;
-	for (let key in value) {
+	for (let key of value) {
 		if (typeof key === "object") {
 			countObj++
 		}
