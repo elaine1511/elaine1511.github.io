@@ -14,33 +14,27 @@ Creates an object that contains the following information from the "this" object
 */
 
 function analyzer() {
-	return {
-		numProperties() {
-			let num = 0;
-			for (let key in this) {
-				num += 1;
-			}
-			return num;
-		},
-		cntShortName() {
-			let count = 0;
-			for (let key in this) {
-				if (key.length < 3) {
-					count++;
-				}
-			}
-			return count;
-		},
-		cntReferences() {
-			let counter = 0;
-			for (let key in this) {
-				if (typeof key === "object") {
-					counter++
-				}
-			}
-			return counter;
-		},
+	let obj = {};
+	let keys = Object.keys(this);
+	let value = Object.values(this);
+
+	obj.numProperties = keys.length;
+	let countNum = 0;
+	for (let key in keys) {
+		if (key.length < 3) {
+			countNum++;
+		}
 	}
+	obj.cntShortName = count;
+
+	let countObj = 0;
+	for (let key in value) {
+		if (typeof key === "object") {
+			countObj++
+		}
+	}
+	obj.cntReferences = countObj;
+	return obj;
 }
 
 
