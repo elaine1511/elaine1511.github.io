@@ -30,7 +30,7 @@ function analyzer() {
 	let countObj = 0;
 	for (let value of values) {
 		if (typeof key === "object") {
-			countObj++
+			countObj++;
 		}
 	}
 	obj.cntReference = countObj;
