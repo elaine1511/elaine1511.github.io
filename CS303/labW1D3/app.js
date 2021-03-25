@@ -15,12 +15,12 @@ Creates an object that contains the following information from the "this" object
 
 function analyzer() {
 	let obj = {};
-	let keys = Object.keys(this);
-	let values = Object.values(this);
+	// let keys = Object.keys(this);
+	// let values = Object.values(this);
 
-	obj.numProperties = keys.length;
+	obj.numProperties = this.length;
 	let countNum = 0;
-	for (let key of keys) {
+	for (let key of this) {
 		if (key.length < 3) {
 			countNum++;
 		}
@@ -28,7 +28,7 @@ function analyzer() {
 	obj.cntShortName = countNum;
 
 	let countObj = 0;
-	for (let value of values) {
+	for (let value of this) {
 		if (typeof value === "object") {
 			countObj++;
 		}
