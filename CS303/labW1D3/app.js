@@ -13,30 +13,54 @@ Creates an object that contains the following information from the "this" object
 }	
 */
 
-function analyzer() {
-	let obj = {};
-	// let keys = Object.keys(this);
-	// let values = Object.values(this);
+// function analyzer() {
+// 	let obj = {};
+// 	let keys = Object.keys(this);
+// 	let values = Object.values(this);
 
-	obj.numProperties = this.length;
+// 	obj.numProperties = keys.length;
+// 	let countNum = 0;
+// 	for (let key of keys) {
+// 		if (key.length < 3) {
+// 			countNum++;
+// 		}
+// 	}
+// 	obj.cntShortName = countNum;
+
+// 	let countObj = 0;
+// 	for (let value of values) {
+// 		if (typeof value === "object") {
+// 			countObj++;
+// 		}
+// 	}
+// 	obj.cntReference = countObj;
+// 	return obj;
+// }
+function analyzer() {
+	let output = {};
+	let k = Object.keys(this);
+	let v = Object.values(this);
+
+	output.numProperties = k.length;
+
 	let countNum = 0;
-	for (let key of this) {
-		if (key.length < 3) {
-			countNum++;
-		}
+	for (let elem of k) {
+
+		if (elem.length < 3) countNum++;
 	}
-	obj.cntShortName = countNum;
+	output.cntShortName = countNum;
 
 	let countObj = 0;
-	for (let value of this) {
-		if (typeof value === "object") {
+	for (let elem of v) {
+
+		if (typeof elem === "object") {
 			countObj++;
 		}
 	}
-	obj.cntReference = countObj;
-	return obj;
-}
+	output.cntReference = countObj;
 
+	return output;
+}
 
 /* Constructor for a person object
 	Person(name, country, grades) creates object
