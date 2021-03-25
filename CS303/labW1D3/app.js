@@ -16,7 +16,7 @@ Creates an object that contains the following information from the "this" object
 function analyzer() {
 	let obj = {};
 	let keys = Object.keys(this);
-	let value = Object.values(this);
+	let values = Object.values(this);
 
 	obj.numProperties = keys.length;
 	let countNum = 0;
@@ -28,7 +28,7 @@ function analyzer() {
 	obj.cntShortName = countNum;
 
 	let countObj = 0;
-	for (let key of value) {
+	for (let value of values) {
 		if (typeof key === "object") {
 			countObj++
 		}
