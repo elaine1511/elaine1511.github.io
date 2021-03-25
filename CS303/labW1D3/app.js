@@ -33,7 +33,7 @@ function analyzer() {
 			countObj++
 		}
 	}
-	obj.cntReferences = countObj;
+	obj.cntReference = countObj;
 	return obj;
 }
 
