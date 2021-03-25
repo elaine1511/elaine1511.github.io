@@ -29,7 +29,7 @@ function analyzer() {
 
 	let countObj = 0;
 	for (let value of values) {
-		if (typeof key === "object") {
+		if (typeof value === "object") {
 			countObj++;
 		}
 	}
