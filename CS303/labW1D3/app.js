@@ -25,7 +25,7 @@ function analyzer() {
 			countNum++;
 		}
 	}
-	obj.cntShortName = count;
+	obj.cntShortName = countNum;
 
 	let countObj = 0;
 	for (let key of value) {
