@@ -23,10 +23,6 @@ function removeEvenCharacters(string) {
 		}
 	}
 }
-console.log(removeEvenCharacters("abcdefgh"));
-console.log(removeEvenCharacters(""));
-console.log(removeEvenCharacters());
-console.log(removeEvenCharacters(5));
 
 
 // Sum the numbers that are greater than zero of array, e.g. sumPositiveNumbers([-1,4,5,-2,-3,10]) === 19
@@ -41,15 +37,12 @@ function sumPositiveNumbers(array) {
 		return result;
 	}
 }
-console.log(sumPositiveNumbers([-1, 4, 5, -6, 10]));
-console.log(sumPositiveNumbers([1, 4, 5, 6, 10]));
-console.log(sumPositiveNumbers([-1, -4, -5, -6, -10]));
-console.log(sumPositiveNumbers([]));
 
 // Write a construction function
 // Input an array containing numbers and string, e.g. [1, "a", "c", 2, 4]
 // Creates an object with two array properties numbers and strings, e.g.
 // new ArrayDemo([1, "a", "c", 2, 4]) returns {numbers:[1, 2, 4]; strings:["a", "c"}
+
 function ArrayDemo(array) {
 	function numberFilter(item) {
 		return typeof item === "number";
@@ -74,7 +67,7 @@ function makePositive(array) {
 	}
 	return result;
 }
-console.log(makePositive([-1, 2, "a", 3, -4, -5]).join(".")); //"1.2.a.3.4.5"
+
 
 // Replaces sequences of 0s with an "*", e.g.
 // removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]) returns [3, "*", 5, "*", 7, "*"];
@@ -84,8 +77,7 @@ function removeZeros(array) {
 			array[i] = "*";
 		}
 	}
-	function filterZeros()
 	return array;
 }
-console.log(removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]));
+
 
