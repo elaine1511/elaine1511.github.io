@@ -64,11 +64,28 @@ function ArrayDemo(array) {
 
 // Makes all negative numbers of the input array positive
 function makePositive(array) {
+	let result = [];
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] < 0) {
+			result.push(array[i] * -1);
+		} else {
+			result.push(array[i]);
+		}
+	}
+	return result;
 }
+console.log(makePositive([-1, 2, "a", 3, -4, -5]).join(".")); //"1.2.a.3.4.5"
 
 // Replaces sequences of 0s with an "*", e.g.
 // removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]) returns [3, "*", 5, "*", 7, "*"];
 function removeZeros(array) {
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] === 0) {
+			array[i] = "*";
+		}
+	}
+	function filterZeros()
+	return array;
 }
-
+console.log(removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]));
 
