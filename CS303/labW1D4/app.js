@@ -9,7 +9,7 @@ function removeEvenCharacters(string) {
 	} else if (typeof string !== "string") {
 		return "argument not string";
 	} else {
-		let strArr = string.split(""); //["a","b","c","d"]
+		let strArr = string.split("");
 		if (strArr.length === 0) {
 			return "";
 		} else {
@@ -85,6 +85,8 @@ function removeZeros(array) {
 	}
 	return arr;
 }
+
+console.log(removeZeros([5, 0, 0, 0, 6, 0, 0, 5, 0]).join("."));
 
 
 

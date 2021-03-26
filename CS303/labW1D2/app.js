@@ -24,8 +24,3 @@ function nameString(obj) {
     }
 }
 
-console.log(nameString([]));
-console.log(nameString());
-console.log(nameString(null));
-console.log(nameString({ a: 5 }));
-console.log(nameString({ a: 5, z: 6, m: 8 }));
