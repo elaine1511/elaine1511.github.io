@@ -58,9 +58,9 @@ function Person(name, country) {
 // The function incrementAbscences (see next) can be called to increment the number of absences.
 function register(students) {
     let registerMap = new Map(Object.entries(students));
-    for (let value of registerMap.values()) {
-        value = 0;
-    }
+    registerMap.forEach((value, key, map) => {
+        map.set(key, 0);
+    })
 }
 
 // Parameters:
