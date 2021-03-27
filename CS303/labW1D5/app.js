@@ -34,13 +34,12 @@ function getFromLocalStorage(name) {
 // addMissProperty tests the object bound to its "this" for the key of "obj" (e.g., location)
 // If the bound object doesn't have that key then the key and its value is added to the bound object.
 function addMissingProperty(obj) {
-    let key;
-    for (key in this) {
-        if (key in obj === false) {
+    Object.keys(obj).forEach(function (key) {
+        if (this.key in obj === false) {
             this.key = obj[key];
         }
     }
-    return obj;
+    )
 }
 
 
