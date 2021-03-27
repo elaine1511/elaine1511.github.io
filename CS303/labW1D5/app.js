@@ -35,9 +35,9 @@ function getFromLocalStorage(name) {
 // If the bound object doesn't have that key then the key and its value is added to the bound object.
 function addMissingProperty(obj) {
     let key;
-    for (key in obj) {
-        if (key in this === false) {
-            return this.key = obj[key];
+    for (key in this) {
+        if (key in obj === false) {
+            this.key = obj[key];
         }
     }
     return obj;
