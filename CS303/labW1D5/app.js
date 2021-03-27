@@ -20,7 +20,8 @@ function countSubstring(s, target) {
 // go to Application tab in the debugger, click on URL under local Storage to see key/value
 
 function saveInLocalStorage(name, obj) {
-    return localStorage.setItem(name, JSON.stringify(obj));
+    name = obj;
+    return localStorage.setItem("name", JSON.stringify(obj));
 
 }
 
@@ -60,7 +61,7 @@ function Person(name, country) {
 // in it to zero. This will be the number of classes that the student has missed.
 // The function incrementAbscences (see next) can be called to increment the number of absences.
 function register(students) {
-    let registerMap = new Map(students);
+    let registerMap = new Map(Object.entries(students));
     for (let student of registerMap.keys()) {
         regeisterMap.set(student, 0);
     }
