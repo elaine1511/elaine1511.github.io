@@ -8,7 +8,6 @@
 function countSubstring(s, target) {
     let count = 0;
     let position = s.indexOf(target);
-
     while (position > -1) {
         count++;
         position = s.indexOf(target, position + 1);
@@ -20,8 +19,8 @@ function countSubstring(s, target) {
 // go to Application tab in the debugger, click on URL under local Storage to see key/value
 
 function saveInLocalStorage(name, obj) {
-    let name = obj;
-    return localStorage.setItem(name, JSON.stringify(obj));
+    name = obj;
+    return localStorage.setItem("name", JSON.stringify(name));
 
 }
 
