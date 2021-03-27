@@ -20,7 +20,7 @@ function countSubstring(s, target) {
 // go to Application tab in the debugger, click on URL under local Storage to see key/value
 
 function saveInLocalStorage(name, obj) {
-    name = obj;
+    let name = obj;
     return localStorage.setItem(name, JSON.stringify(obj));
 
 }
