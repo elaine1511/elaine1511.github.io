@@ -58,9 +58,9 @@ function Person(name, country) {
 // in it to zero. This will be the number of classes that the student has missed.
 // The function incrementAbscences (see next) can be called to increment the number of absences.
 function register(students) {
-    let registerMap = new Map(Object.entries(students));
+    let registerMap = new Map(students);
     for (let student of registerMap.values()) {
-        student = 0;
+        regeisterMap.set(student, 0);
     }
     return registerMap;
 
