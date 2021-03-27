@@ -20,12 +20,13 @@ function countSubstring(s, target) {
 // go to Application tab in the debugger, click on URL under local Storage to see key/value
 
 function saveInLocalStorage(name, obj) {
-    return name = JSON.stringify(obj);
+    return localStorage.setItem("name", JSON.stringify(name));
 }
 
 // Return value of name in localStorage
 function getFromLocalStorage(name) {
-    return JSON.parse(name);
+    let retriveveName = localStorage.getItem("name");
+    return JSON.parse(retriveveName);
 }
 
 // This function has an unbounded this. When it is called, the this will be bound to some object
