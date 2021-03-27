@@ -36,7 +36,7 @@ function getFromLocalStorage(name) {
 function addMissingProperty(obj) {
     for (let key in obj) {
         if (key in this === false) {
-            this["key"] === obj[key];
+            this.key === obj[key];
         }
     }
 }
