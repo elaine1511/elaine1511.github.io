@@ -41,10 +41,7 @@ function addMissingProperty(obj) {
         }
     }
 }
-let obj = { name: "bob", school: "miu" };
-obj.f = addMissingProperty;
-obj.f({ location: "fairfield" });
-console.log(obj.location);
+
 
 // Constructor function which creates object {name:name, country:country, creationDate:...}
 // Where creationDate is the time that the object is created.
@@ -62,8 +59,8 @@ function Person(name, country) {
 // The function incrementAbscences (see next) can be called to increment the number of absences.
 function register(students) {
     let registerMap = new Map(Object.entries(students));
-    for (let student of registerMap.keys()) {
-        registerMap.set(student, 0);
+    for (let student of registerMap.values()) {
+        student = 0;
     }
     return registerMap;
 
