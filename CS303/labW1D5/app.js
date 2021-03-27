@@ -21,7 +21,7 @@ function countSubstring(s, target) {
 
 function saveInLocalStorage(name, obj) {
     name = obj;
-    return localStorage.setItem("name", JSON.stringify(obj));
+    return localStorage.setItem(name, JSON.stringify(obj));
 
 }
 
