@@ -61,6 +61,7 @@ function register(students) {
     registerMap.forEach((value, key, map) => {
         map.set(key, 0);
     })
+    return registerMap;
 }
 
 // Parameters:
