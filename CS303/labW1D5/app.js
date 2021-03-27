@@ -39,10 +39,11 @@ function getFromLocalStorage(name) {
 function addMissingProperty(obj) {
     let key;
     for (key in obj) {
-        if ("key" in this === false) {
+        if (key in this === false) {
             return this.key = obj[key];
         }
     }
+    return obj;
 }
 
 
@@ -62,9 +63,10 @@ function Person(name, country) {
 // The function incrementAbscences (see next) can be called to increment the number of absences.
 function register(students) {
     let registerMap = new Map(Object.entries(students));
-    for (let student of registerMap.keys()) {
-        regeisterMap.set(student, 0);
+    for (let value of registerMap.values()) {
+        value = 0;
     }
+    return registerMap;
 }
 
 // Parameters:
