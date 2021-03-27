@@ -61,7 +61,6 @@ function register(students) {
     for (let value of registerMap.values()) {
         value = 0;
     }
-    return registerMap;
 }
 
 // Parameters:
