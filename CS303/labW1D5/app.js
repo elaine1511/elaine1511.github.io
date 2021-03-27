@@ -20,12 +20,13 @@ function countSubstring(s, target) {
 // go to Application tab in the debugger, click on URL under local Storage to see key/value
 
 function saveInLocalStorage(name, obj) {
-    return localStorage.setItem("name", JSON.stringify(name));
+    return localStorage.setItem(name, JSON.stringify(obj));
+
 }
 
 // Return value of name in localStorage
 function getFromLocalStorage(name) {
-    let retriveveName = localStorage.getItem("name");
+    let retriveveName = localStorage.getItem(name);
     return JSON.parse(retriveveName);
 }
 
